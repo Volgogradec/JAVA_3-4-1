@@ -4,6 +4,7 @@ import ru.netology.domain.MovieItem;
 
 public class MovieManager {
   private MovieItem[] items = new MovieItem[0];
+  int defaultCount = 10;
 
   public void add(MovieItem item) {
     // создаём новый массив размером на единицу больше
@@ -23,8 +24,8 @@ public class MovieManager {
 
   public MovieItem[] getAll(int movieListLimit) {
     MovieItem[] result = new MovieItem[items.length];
-    if (movieListLimit > 10){
-      movieListLimit = 10;
+    if (movieListLimit > defaultCount){
+      movieListLimit = defaultCount;
     }
     if (movieListLimit > result.length){
       movieListLimit = result.length;
@@ -44,7 +45,7 @@ public class MovieManager {
     for (int i=0; i < movieListLimit; i++) {
       destArr[i] = result[i];
     }
-//    return result;
+    //    return result;
     return destArr;
   }
 
