@@ -41,8 +41,7 @@ public class AfishaRepository {
     }
 
     public MovieItem[] removeAll() {
-        MovieItem[] items = new MovieItem[0];
-
+        items = new MovieItem[0];
         return items;
     }
 }
